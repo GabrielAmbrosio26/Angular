@@ -3,5 +3,5 @@
 }
 
 .main {
-  @apply w-full h-full overflow-scroll;
+  @apply flex-1 h-screen overflow-auto;
 }

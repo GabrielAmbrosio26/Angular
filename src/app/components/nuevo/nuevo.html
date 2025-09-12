@@ -1,0 +1,55 @@
+<section>
+  <div class="tarjeta">
+    <form [formGroup]="formularioDeMetas" (ngSubmit)="subirFormulario()" class="p-4">
+        <label class="label">
+          describe tu meta
+          <input class="input" placeholder="ej. 52 caminatas" formControlName="detalles">
+        </label>
+        <label class="label">
+          ¿Con que frecuencia deseas cumplir tu meta?<span>(ej. 1 vez a la semana)</span>
+          <div class="flex mb-6">
+            <input type="number" class="input mr-6" formControlName="eventos">
+            <select class="input" formControlName="periodo">
+              @for(frecuencia of frecuencias; track frecuencia){
+                <option [value]="frecuencia">{{frecuencia}}</option>
+              }
+            </select>
+          </div>
+        </label>
+        <label class="label">
+          ¿Cuantas veces deseas completar esta meta?
+          <input type="number" class="input" formControlName="meta">
+        </label>
+        <label class="label">
+          ¿Tienes una fecha limite?
+          <input type="date" class="input" formControlName="plazo">
+        </label>
+        <label class="label">
+          ¿Cuantas veces has completado esta meta?
+          <input type="number" class="input" formControlName="completado">
+        </label>
+        <label class="label">
+          Escoge el icono para la meta
+          <select class="input" formControlName="icono">
+            @for(icono of iconos; track icono){
+              <option [value]="icono">
+                {{icono}}
+              </option>
+            }
+          </select>
+        </label>
+    </form>
+    <div class="botones">
+      @if(!metasIng){
+          <button class="boton boton--negro" (click)="subirFormulario()">Crear</button>
+      }
+      @if(metasIng){
+          <button class="boton boton--negro" (click)="actualizarMeta()">Actualizar</button>
+      }
+      @if(metasIng){
+          <button class="boton boton--rojo" (click)="eliminarMeta()">Borrar</button>
+      }
+      <button class="boton boton--gris">Cancelar</button>
+    </div>
+  </div>
+</section>
