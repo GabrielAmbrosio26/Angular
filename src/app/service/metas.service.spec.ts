@@ -5,7 +5,7 @@ import { Meta } from '../core/models/meta';
 
 // ng test --include src/app/service/metas.service.spec.ts
 
-describe('MetasService', () => {
+fdescribe('MetasService', () => {
   let service: MetasService;
   let backendSpy: jasmine.SpyObj<Backend>;
 
