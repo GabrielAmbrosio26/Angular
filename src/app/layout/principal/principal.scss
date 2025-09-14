@@ -1,7 +1,19 @@
+// .aside {
+//   @apply flex flex-col text-gray-700 bg-gray-100 w-60 h-full;
+// }
+
+// .main {
+//   @apply flex-1 h-screen overflow-auto;
+// }
+
+.principal {
+  @apply flex h-screen; /* contenedor de todo */
+}
+
 .aside {
-  @apply flex flex-col text-gray-700 bg-gray-100 w-60 h-full;
+  @apply flex flex-col w-60 bg-gray-100; /* ya no h-full */
 }
 
 .main {
-  @apply flex-1 h-screen overflow-auto;
+  @apply flex-1 overflow-auto; /* ocupa todo el espacio que queda */
 }

@@ -84,4 +84,8 @@ export class Nuevo implements OnChanges{
       this.servicioCursos.eliminarMetas(this.llenarMetaAEnviar()); // solo pasamos el objeto
       this.router.navigate(['/']);
     }
+    
+        cancelar() {
+        this.router.navigate(['/']);
+    }
  }
